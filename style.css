@@ -1,0 +1,1345 @@
+@font-face {
+    font-family: 'Christmas Squad';
+    src: url('fonts/Christmas Squad - Personal Use.otf') format('opentype');
+    /*  font-family: 'Christmas Squad', sans-serif; */
+}
+
+@font-face {
+    font-family: 'Bebas-neue';
+    src: url("fonts/BebasNeue\ Regular.otf") format('opentype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#main {
+    height: 85vh;
+    position: relative;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+#main .menu {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    height: 100%;
+    color: #e0e0e0;
+    z-index: 100;
+    font-size: 15px;
+}
+
+#main .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 17px;
+}
+
+#main .menu ul .icons {
+    width: 16px;
+    position: relative;
+}
+
+#main .menu ul li {
+    font-family: "Bebas-neue", "sans-serif";
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 5px;
+    list-style: none;
+}
+
+#main .menu ul a:active {
+    font-size: 23px;
+    text-shadow: 0.5px 0.5px 10px rgb(255, 255, 255);
+}
+
+#main .menu ul li a img:active {
+    width: 35px;
+    box-shadow: 1px 1px 10px white;
+}
+
+.squard:active {
+    border-radius: 30%;
+}
+
+.cicle:active {
+    border-radius: 50%;
+}
+
+#header .logo {
+    width: 50px;
+}
+
+#img_main {
+    position: absolute;
+    right: 5px;
+    height: 80%;
+    width: 85vw;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#img_main video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#img_main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+#logoMain {
+    position: absolute;
+    top: 62%;
+    left: -5%;
+    z-index: 100;
+    width: 350px;
+}
+
+#logoMain img {
+    width: 100%;
+    height: 100%;
+}
+
+#about {
+    height: 40vh;
+    margin-bottom: 5vh;
+}
+
+#about>div {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin: auto;
+}
+
+#about>div p {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    color: #e0e0e0;
+}
+
+#catalogo {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px);
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    top: 12%;
+    width: 65vw;
+    left: 51%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.carousel .list .item .content .title {
+    font-family: 'Christmas Squad', sans-serif;
+    font-size: 60px;
+    text-shadow: 4px 4px 5px black;
+}
+
+.carousel .list .item .content .des {
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-family: sans-serif;
+}
+
+.carousel .list .item .content .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 3px;
+}
+
+.carousel .list .item .content button {
+    border: none;
+    background-color: white;
+    letter-spacing: 3px;
+    font-family: Arial;
+    font-weight: 500px;
+    color: black;
+    cursor: pointer;
+}
+
+.carousel .list .item .content button:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.212);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border: 1px solid #eee;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title {
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Christmas Squad', sans-serif;
+    font-size: 30px;
+}
+
+.arrows {
+    position: absolute;
+    bottom: 12%;
+    right: 55%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(192, 174, 174, 0.267);
+    border: none;
+    font-family: monospace;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.arrows button:active {
+    background-color: #eee;
+    color: #555;
+}
+
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+
+.carousel .list .item:nth-child(1) .title {
+    animation-delay: 0.8s;
+}
+
+.carousel .list .item:nth-child(1) .des {
+    animation-delay: 0.9s;
+}
+
+.carousel .list .item:nth-child(1) .buttons {
+    animation-delay: 1.0s;
+}
+
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail .5s linear forwards;
+}
+
+@keyframes showThumbnail {
+    to {
+        width: 150px;
+    }
+}
+
+.carousel.next .thumbnail {
+    transform: translateX(150px);
+    animation: transformThumbnail .5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+    to {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .author,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .topic,
+.carousel.prev .list .item:nth-child(2) .des,
+.carousel.prev .list .item:nth-child(2) .buttons {
+    animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(21);
+        opacity: 0;
+    }
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+
+.time {
+    width: 0%;
+    height: 9px;
+    background-color: rgba(255, 255, 255, 0.616);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    width: 100%;
+    animation: timeRunning 3s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+    to {
+        width: 0;
+    }
+
+}
+
+.displayPdt {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.960);
+    min-height: 100vh;
+    max-height: 110vh;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.displayPdt>h1 {
+    font-family: 'Bebas-neue', "sans-serif";
+    font-weight: 500;
+    letter-spacing: 4px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 5vw;
+}
+
+.d1 h3 {
+    font-family: sans-serif;
+    color: white;
+    margin-top: 10px;
+    font-size: 4vw;
+}
+
+.closePage {
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    font-size: 4vh;
+    cursor: pointer;
+}
+
+.displayContent {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding-bottom: 50px;
+    height: auto;
+}
+
+.displayContent>div {
+    padding-top: 5vh;
+}
+
+.displayContent>div>h2 {
+    font-size: 4vw;
+}
+
+.displayContent>div>ul>li {
+    font-size: 3vw;
+    padding-top: 2vh;
+    color: rgb(216, 216, 216);
+    list-style: none;
+}
+
+.displayContent>div>p {
+    font-size: 3vw;
+    padding-top: 1vh;
+    color: rgb(216, 216, 216);
+}
+
+.peliculas_ico {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vh;
+
+}
+
+.peliculas_ico p {
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+    padding-top: 3px;
+    color: rgb(216, 216, 216);
+}
+
+.peliculas_ico_legend p {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 3%;
+}
+
+.peliculas_ico_legend p img {
+    width: 10%;
+    padding-right: 3%;
+    box-sizing: border-box;
+}
+
+.peliculas_ico p img {
+    width: 25%;
+    padding-right: 2px;
+    box-sizing: border-box;
+}
+
+span {
+    font-size: 2.5vw;
+    color: rgb(168, 168, 168);
+    padding-top: 10px;
+}
+
+.dp_pelicula {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#galery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10vh 0 5vh 0;
+    margin: 0;
+    position: relative;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+    gap: 15px;
+    width: 80%;
+}
+
+.gallery-item {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.modalGalery {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 15;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modalGalery-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+
+}
+
+.closeGalery {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prevGalery,
+.nextGalery {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prevGalery {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.nextGalery {
+    right: 0;
+    border-radius: 3px 3px 0 0;
+}
+
+#footer {
+    height: auto;
+    padding: 40px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: sans-serif;
+}
+
+#footer .footerImg img {
+    width: 110px;
+}
+
+#footer .footerContent {
+    display: flex;
+    align-items: start;
+    width: 80vw;
+    color: white;
+}
+
+#footer .footerContent .socials,
+#footer .footerContent .map {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+#footer .footerContent .socials>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#footer .footerContent .socials img {
+    width: 20px;
+}
+
+#footer .footerContent .map {
+    font-size: 12px;
+
+}
+
+#footer .footerContent .map>button,
+#footer .footerContent .map>button a {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    border: none;
+    background-color: white;
+    letter-spacing: 3px;
+    font-family: Arial;
+    font-weight: 500px;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 390px) {
+    #about {
+        height: 60vh;
+    }
+
+    #catalogo {
+        height: 100vh;
+    }
+
+    .carousel {
+        height: 100vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 53%;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 6vh;
+    }
+
+    .carousel .list .item .content .des {
+        font-size: 1.8vh;
+        line-height: 2.2vh;
+    }
+
+    .carousel .list .item .content .buttons {
+        grid-template-columns: repeat(2, 25vw);
+        grid-template-rows: 5vh;
+    }
+
+    .carousel .list .item .content button {
+        letter-spacing: 0.5vh;
+        font-size: 1.5vh;
+    }
+
+    .thumbnail {
+        bottom: 5vh;
+    }
+
+    .thumbnail .item {
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 3.5vw;
+    }
+
+    .arrows {
+        bottom: 10%;
+        left: 15%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 20vw;
+            height: 20vh;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 5vh;
+        }
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width: 20vw;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #img_main {
+        width: 70vw;
+    }
+
+    #logoMain {
+        top: 55%;
+        left: 0.5%;
+        width: 70vw;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 10%;
+    }
+
+    #main .menu ul .icons {
+        width: 2.5vw;
+    }
+
+    #main .menu ul li {
+        font-size: 2.5vw;
+        letter-spacing: 0.9vw;
+    }
+
+    #about {
+        margin-top: -5vh;
+        height: 30vh;
+    }
+
+    #about>div {
+        width: 50%;
+    }
+
+    #catalogo {
+        height: 80vh;
+    }
+
+    .carousel {
+        height: 80vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 53%;
+    }
+
+    .carousel .list .item .content .des {
+        font-size: 2vw;
+    }
+
+    .thumbnail {
+        bottom: 5vh;
+    }
+
+    .thumbnail .item {
+        width: 20vw;
+        height: 25vh;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 3.5vw;
+    }
+
+    .arrows {
+        bottom: 18%;
+        left: 20%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 20vw;
+            height: 25vh;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 5vh;
+        }
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width: 20vw;
+        }
+    }
+
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+        gap: 50px;
+        padding-left: 20px;
+    }
+
+    .gallery-item {
+        width: 150px;
+        height: 150px;
+    }
+
+    .closeGalery {
+        right: 100px;
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        color: white;
+        gap: 14vw;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 915px) and (orientation: landscape) {
+
+    #img_main {
+        width: 50vw;
+    }
+
+    #logoMain {
+        top: 30%;
+        left: 10%;
+        width: 40vw;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 5%;
+    }
+
+    #main .menu ul .icons {
+        width: 1.8vw;
+    }
+
+    #main .menu ul li {
+        font-size: 1.8vw;
+        letter-spacing: 0.5vw;
+    }
+
+    #about {
+        height: 80vh;
+    }
+
+    #about>div {
+        width: 50%;
+    }
+
+    #catalogo {
+        height: 100vh;
+    }
+
+    .carousel {
+        height: 100vh;
+    }
+
+    .carousel .list .item .content {
+        top: 10%;
+        width: 65vw;
+        left: 40%;
+    }
+
+    .carousel .list .item .content .des {
+        letter-spacing: 1px;
+        line-height: 10px;
+        font-size: 10px
+    }
+
+    .thumbnail {
+        bottom: 20px;
+    }
+
+    .thumbnail .item {
+        width: 125px;
+        height: 125px;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 25px;
+    }
+
+    .arrows {
+        bottom: 8%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 125px;
+            height: 125px;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 20px;
+        }
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        color: white;
+        gap: 100px;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #img_main {
+        width: 70vw;
+    }
+
+    #logoMain {
+        top: 50%;
+        left: 0.5%;
+        width: 70vw;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 10%;
+    }
+
+    #main .menu {
+        top: 8%;
+        left: 6%;
+    }
+
+    #main .menu ul {
+        gap: 3vw;
+    }
+
+    #main .menu ul .icons {
+        width: 2.8vw;
+    }
+
+    #main .menu ul li {
+        font-size: 2.8vw;
+        letter-spacing: 1vw;
+    }
+
+    #about {
+        height: 40vh;
+    }
+
+    #about>div {
+        width: 50%;
+    }
+
+    #about>div p {
+        margin-bottom: 1vh;
+        font-size: 2.5vw;
+    }
+
+
+    #catalogo {
+        height: 80vh;
+        overflow-x: hidden;
+    }
+
+    .carousel {
+        height: 80vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 53%;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 8vw;
+    }
+
+    .carousel .list .item .content .des {
+        line-height: 2.8vw;
+        font-size: 2.2vw;
+    }
+
+    .carousel .list .item .content .buttons {
+        grid-template-columns: repeat(2, 15vw);
+        grid-template-rows: 4vh;
+        gap: 0.5vw;
+        margin-top: 1vh;
+    }
+
+    .carousel .list .item .content button {
+        letter-spacing: 0.3vw;
+        font-size: 1.5vw;
+    }
+
+    .thumbnail .item {
+        width: 20vw;
+        height: 25vh;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 4vw;
+    }
+
+    .arrows {
+        bottom: 18%;
+        left: 20%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 20vw;
+            height: 25vh;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 50px;
+        }
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width: 20vw;
+        }
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+        gap: 50px;
+        padding-left: 30px;
+    }
+
+    .gallery-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .closeGalery {
+        right: 200px;
+    }
+
+    #footer {
+        font-size: 1.8vw;
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        gap: 20vw;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+
+    #footer .footerContent .socials img {
+        width: 3vw;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+
+    #img_main {
+        width: 49vw;
+    }
+
+    #logoMain {
+        top: 25%;
+        left: 10%;
+        width: 30vw;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 10%;
+    }
+
+    #main .menu {
+        top: 8%;
+        left: 8%;
+    }
+
+    #main .menu ul {
+        gap: 2vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #main .menu ul .icons {
+        width: 1.3vw;
+    }
+
+    #main .menu ul li {
+        font-size: 1.3vw;
+        letter-spacing: 0.5vw;
+    }
+
+    #main .menu ul a:hover {
+        font-size: 1.7vw;
+        text-shadow: 0.5px 0.5px 10px rgb(255, 255, 255);
+    }
+
+    #main .menu ul li a img:hover {
+        width: 2vw;
+        box-shadow: 1px 1px 10px white;
+    }
+
+    .squard:hover {
+        border-radius: 30%;
+    }
+
+    .cicle:hover {
+        border-radius: 50%;
+    }
+
+    #about {
+        margin-top: -5vh;
+        height: 60vh;
+    }
+
+    #about>div {
+        width: 40%;
+    }
+
+    #about>div p {
+        margin-bottom: 1vh;
+        font-size: 1.2vw;
+        font-family: sans-serif;
+        color: #e0e0e0;
+    }
+
+    #catalogo {
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .carousel {
+        height: 100vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 43%;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 5vw;
+    }
+
+    .carousel .list .item .content .des {
+        line-height: 4vh;
+        font-size: 1vw;
+        max-width: 40vw;
+    }
+
+    .carousel .list .item .content .buttons {
+        grid-template-columns: repeat(2, 7vw);
+        grid-template-rows: 6vh;
+        gap: 0.5vw;
+        margin-top: 0.8vw;
+    }
+
+    .carousel .list .item .content button {
+        letter-spacing: 0.2vw;
+        font-size: 0.7vw;
+    }
+
+    .thumbnail .item {
+        width: 10vw;
+        height: 40vh;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 2vw;
+    }
+
+    .arrows {
+        bottom: 18%;
+        left: 20%;
+    }
+
+    .carousel.next .list .item:nth-child(1) img {
+        width: 10vw;
+        height: 40vh;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 10vw;
+            height: 40vh;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 50px;
+        }
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width: 10vw;
+        }
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+        gap: 10vh;
+        padding-top: 10vh;
+        max-width: 70vw;
+    }
+
+    .gallery-item {
+        width: 250px;
+        height: auto;
+    }
+
+    .prevGalery,
+    .nextGalery {
+        font-weight: 100;
+        font-size: 45px;
+    }
+
+    .prevGalery {
+        left: 20vw;
+    }
+
+    .nextGalery {
+        right: 20vw;
+    }
+
+    .closeGalery {
+        right: 21vw;
+        font-size: 70px;
+    }
+
+    #footer {
+        height: 40vh;
+        font-size: 1vw;
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        gap: 20vw;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+
+    #footer .footerContent .map p {
+        font-size: 0.9vw;
+        max-width: 300px;
+
+    }
+
+    #footer .footerContent .socials img {
+        width: 1.5vw;
+    }
+}
