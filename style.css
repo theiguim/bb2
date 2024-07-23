@@ -103,8 +103,15 @@ body {
 }
 
 #img_main_over {
-    display: none;
+    position: absolute;
+    right: 5px;
+    height: 80%;
+    width: 85vw;
+    overflow: hidden;
+    z-index: 2;
+    background: linear-gradient(212deg, rgba(1,0,21,0) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%);
 }
+
 
 #img_main video {
     height: 100%;
@@ -814,6 +821,10 @@ span {
         width: 70vw;
     }
 
+    #img_main_over{
+        width: 70vw;
+    }
+
     #logoMain {
         top: 55%;
         left: 0.5%;
@@ -929,6 +940,11 @@ span {
         width: 50vw;
     }
 
+    #img_main_over{
+        width: 50vw;
+    }
+
+
     #logoMain {
         top: 30%;
         left: 10%;
@@ -1020,6 +1036,9 @@ span {
 @media only screen and (min-width: 1024px) {
 
     #img_main {
+        width: 70vw;
+    }
+    #img_main_over{
         width: 70vw;
     }
 
