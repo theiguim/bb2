@@ -219,6 +219,9 @@ body {
     color: black;
     cursor: pointer;
 }
+.carousel .list .item .content button:hover{
+    transform: scale(1.1);
+}
 
 .carousel .list .item .content button:nth-child(2) {
     background-color: rgba(255, 255, 255, 0.212);
@@ -294,6 +297,11 @@ body {
 .arrows button:active {
     background-color: #eee;
     color: #555;
+}
+.arrows button:hover{
+    background-color: #eee;
+    color: #555; 
+    transform: scale(1.2);
 }
 
 .carousel .list .item:nth-child(1) {
@@ -691,6 +699,10 @@ span {
     gap: 5px;
 }
 
+#footer .footerContent .socials>div:hover{
+    transform: scale(1.1);
+}
+
 #footer .footerContent .socials img {
     width: 20px;
 }
@@ -712,6 +724,9 @@ span {
     font-weight: 500px;
     color: black;
     cursor: pointer;
+}
+#footer .footerContent .map>button:hover{
+    transform: scale(1.1);
 }
 
 @media only screen and (min-width: 300px) and (max-width: 390px) {
@@ -1294,8 +1309,9 @@ span {
     }
 
     .gallery-item {
-        width: 100%;
-        height: auto;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
     }
 
     .prevGalery,
